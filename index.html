@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roberto Pineiro - Systems, Network, and DevOps Administrator with 20+ years of IT experience in Linux, Cisco, Docker, Kubernetes, automation, and network infrastructure.">
+    <title>Roberto Pineiro - Systems, Network, and DevOps Administrator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: radial-gradient(circle at top right, #e9f5ff, #f8fafc 45%, #eef2f7 100%);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            border-radius: 14px;
+        }
+        
+        header {
+            border-bottom: 3px solid #0066cc;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            color: #0f4c81;
+            margin-bottom: 5px;
+            letter-spacing: 0.02em;
+        }
+        
+        .title {
+            font-size: 1.3em;
+            color: #475569;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            color: #0066cc;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0066cc;
+            padding-left: 10px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .job, .education {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .job:last-child, .education:last-child {
+            border-bottom: none;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #0066cc;
+        }
+        
+        .company {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .date {
+            color: #767676;
+            font-size: 0.9em;
+        }
+        
+        .location {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+        
+        .job-description {
+            color: #334155;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        .job-description ul {
+            margin-left: 18px;
+        }
+
+        .job-description li {
+            margin-bottom: 6px;
+        }
+
+        .role-tracks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .role-track {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .role-track h4 {
+            font-size: 0.95em;
+            color: #0f4c81;
+            margin-bottom: 8px;
+        }
+
+        .role-track ul {
+            margin-left: 18px;
+        }
+
+        .role-track li {
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #0066cc;
+        }
+        
+        .skill-category h3 {
+            color: #0066cc;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        
+        .skill-category p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .summary {
+            background-color: #f0f7ff;
+            padding: 15px;
+            border-left: 4px solid #0066cc;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .focus-card {
+            background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+            border: 1px solid #dbeafe;
+            border-radius: 10px;
+            padding: 14px;
+        }
+
+        .focus-card h3 {
+            color: #0f4c81;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        .focus-card p {
+            color: #334155;
+            font-size: 0.92em;
+            line-height: 1.45;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #767676;
+            font-size: 0.9em;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+
+            .date {
+                color: black;
+            }
+
+            footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Roberto Pineiro</h1>
+            <p class="title">Systems, Network, and DevOps Administrator</p>
+            <div class="contact-info">
+                <span>📍 Miami, FL 33126</span>
+                <span>📞 <a href="tel:+17865973106">(786) 597-3106</a></span>
+                <span>✉️ <a href="mailto:pinerolly05@gmail.com">pinerolly05@gmail.com</a></span>
+                <span>🔗 <a href="https://www.linkedin.com/in/roberto-pineiro-64953041" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+                <span>💻 <a href="https://github.com/pinerolly" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+            </div>
+        </header>
+        
+        <section class="summary">
+            <strong>Professional Summary:</strong><br>
+            Electrical Engineer specializing in telecommunications and automation, with 20+ years of IT experience.
+            Hybrid profile across network engineering, Linux systems administration, and practical DevOps operations.
+            Hands-on expertise in network security, virtualization, Docker, Kubernetes, CI-friendly infrastructure, and self-hosted platforms.
+    
+        </section>
+
+        <section class="section">
+            <h2>Role-Target Highlights</h2>
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <h3>Network Engineering</h3>
+                    <p>Enterprise networking, VLANs, routing and switching, wireless infrastructure, firewall security, incident troubleshooting, and performance optimization.</p>
+                </div>
+                <div class="focus-card">
+                    <h3>Linux Systems Administration</h3>
+                    <p>Linux server administration, DNS and DHCP services, virtualization platforms, monitoring operations, backup strategy, and infrastructure hardening.</p>
+                </div>
+                <div class="focus-card">
+                    <h3>DevOps and Platform Operations</h3>
+                    <p>Docker and Kubernetes, self-hosted services, IAM/SSO integration, automation workflows, redundancy design, and disaster recovery validation.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Systems and Network Administrator</div>
+                        <div class="company">Pinerolly Inc.</div>
+                    </div>
+                    <div class="date">Jan 2017 - Present (9 years)</div>
+                </div>
+                <div class="location">Miami, Florida, United States</div>
+                <div class="job-description">
+                    <div class="role-tracks">
+                        <div class="role-track">
+                            <h4>Network Engineering - Top 5</h4>
+                            <ul>
+                                <li>Ensured availability, performance, and security of enterprise network infrastructure.</li>
+                                <li>Installed and maintained critical network hardware and software systems.</li>
+                                <li>Resolved network incidents through automated monitoring and alerting workflows.</li>
+                                <li>Led troubleshooting and optimization initiatives to improve network reliability and throughput.</li>
+                                <li>Configured a secure VPS tunnel gateway for controlled external access to internal services.</li>
+                            </ul>
+                        </div>
+                        <div class="role-track">
+                            <h4>Linux Systems Administration - Top 5</h4>
+                            <ul>
+                                <li>Designed and maintained a Proxmox-based lab for virtualization and secure remote operations.</li>
+                                <li>Deployed and operated self-hosted Linux services including NGINX Proxy Manager and AdGuard DNS.</li>
+                                <li>Implemented a secondary Proxmox backup server for redundancy and recovery validation.</li>
+                                <li>Integrated Authentik IAM/SSO for centralized authentication and authorization across services.</li>
+                                <li>Implemented APC UPS and NUT automation for graceful shutdown during power outages.</li>
+                            </ul>
+                        </div>
+                        <div class="role-track">
+                            <h4>DevOps and Platform Operations - Top 5</h4>
+                            <ul>
+                                <li>Built, configured, and troubleshot Docker and Kubernetes environments for service delivery.</li>
+                                <li>Standardized deployment and operations of self-hosted platforms including Home Assistant and Immich.</li>
+                                <li>Integrated ESP32-based IoT workloads with Home Assistant for real-time monitoring and control.</li>
+                                <li>Implemented automation-first infrastructure patterns across networking, identity, and backup layers.</li>
+                                <li>Maintained resilient platform operations using redundancy, secure access, and recovery testing practices.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Information Technology Specialist</div>
+                        <div class="company">CXP-USA</div>
+                    </div>
+                    <div class="date">Oct 2014 - Sep 2016 (2 years)</div>
+                </div>
+                <div class="location">Miami, Florida, United States</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Resolved network and connectivity issues across office infrastructure.</li>
+                        <li>Configured and maintained wireless networks for reliability and coverage.</li>
+                        <li>Configured IP phone systems and Asterisk PBX server environments.</li>
+                        <li>Developed internal web applications using HTML, CSS3, and JavaScript.</li>
+                        <li>Produced operational reports and data analysis to support IT decisions.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Cisco Associate (CCNA) Technician</div>
+                        <div class="company">Brehen Consulting Group</div>
+                    </div>
+                    <div class="date">Aug 2013 - Oct 2014 (1 year 3 months)</div>
+                </div>
+                <div class="location">Miami, Florida, United States</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Installed and configured Cisco routers and switches.</li>
+                        <li>Installed and configured Cisco IP telephony systems.</li>
+                        <li>Installed and configured Linux-based PBX (Asterisk).</li>
+                        <li>Performed network troubleshooting and diagnostics.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Cisco Associate (CCNA) Technician</div>
+                        <div class="company">QWERTY Systems Inc.</div>
+                    </div>
+                    <div class="date">May 2012 - Jun 2013 (1 year 2 months)</div>
+                </div>
+                <div class="location">Las Palmas, Canary Islands, Spain</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Installed HP servers running Linux operating systems.</li>
+                        <li>Installed and configured HP routers and switches.</li>
+                        <li>Configured VLANs, routing protocols, wireless networks, and network designs.</li>
+                        <li>Installed and configured Fortinet firewalls and security appliances.</li>
+                        <li>Performed network troubleshooting for enterprise environments.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Network Administrator</div>
+                        <div class="company">GEDEME, Department of Research and Development</div>
+                    </div>
+                    <div class="date">Nov 2007 - Oct 2011 (4 years)</div>
+                </div>
+                <div class="location">Havana, Cuba</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Installed and configured Linux-based email, DNS, DHCP, FTP, TFTP, and HTTP servers.</li>
+                        <li>Implemented and maintained Linux firewall systems.</li>
+                        <li>Built storage solutions with FreeNAS and Openfiler using SCSI, AoE, and FCoE protocols.</li>
+                        <li>Installed and configured vSphere infrastructure for servers and VDI environments.</li>
+                        <li>Installed and configured Linux containers and virtualization using Proxmox.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Network Assistant</div>
+                        <div class="company">Cuban National Sport Institute</div>
+                    </div>
+                    <div class="date">Jun 2004 - Sep 2007 (3 years 4 months)</div>
+                </div>
+                <div class="location">Havana, Cuba</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Provided helpdesk support for end users and workstation issues.</li>
+                        <li>Edited and maintained the company website.</li>
+                        <li>Supported network design and installation projects.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Physics Teacher</div>
+                        <div class="company">Universidad Tecnológica de La Habana "Jose Antonio Echeverría" (CUJAE)</div>
+                    </div>
+                    <div class="date">Sep 2001 - Jun 2003 (1 year 10 months)</div>
+                </div>
+                <div class="location">Havana, Cuba</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Taught college-level physics courses for engineering students.</li>
+                        <li>Developed and delivered curriculum and instructional materials.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Education</h2>
+            
+            <div class="education">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">BS Electrical Engineering - Telecommunications Engineering</div>
+                        <div class="company">Universidad Tecnológica de La Habana "Jose Antonio Echeverría" (CUJAE)</div>
+                    </div>
+                    <div class="date">2002 - 2007</div>
+                </div>
+            </div>
+            
+            <div class="education">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">CCNA Exploration 4 - Computer Systems Networking and Telecommunications</div>
+                        <div class="company">Cisco Certified Associate Program</div>
+                    </div>
+                    <div class="date">2012 - 2013</div>
+                </div>
+            </div>
+            
+            <div class="education">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">BS Physics Education</div>
+                        <div class="company">Higher Pedagogic Institute "Enrique Jose Varona"</div>
+                    </div>
+                    <div class="date">1996 - 2001</div>
+                </div>
+                <div class="location">Havana, Cuba</div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Skills and Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Networking</h3>
+                    <p>Network Design, Network Security, TCP/IP, VLANs, Routing Protocols, Wireless Configuration</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cisco Technologies</h3>
+                    <p>Cisco Routers, Switches, Phones, CCNA Certified</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Linux & Servers</h3>
+                    <p>Linux Administration, Email Servers, DNS, DHCP, FTP, HTTP, Firewall Configuration</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & Virtualization</h3>
+                    <p>AWS, Google Cloud, Docker, Kubernetes, vSphere, Proxmox, Virtual Desktop Infrastructure</p>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & Automation</h3>
+                    <p>Infrastructure Automation, Monitoring, CI-Friendly Workflows, IAM/SSO Integration, Backup and Recovery</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Storage Solutions</h3>
+                    <p>FreeNAS, Openfiler, SCSI, AoE, FCoE</p>
+
+                    
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS3, JavaScript</p>
+                </div>
+                <div class="skill-category">
+                    <h3>System Administration</h3>
+                    <p>PBX Systems, Asterisk, Network Management, Monitoring & Troubleshooting</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <p>Spanish (Native), English</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2026 Roberto Pineiro. Resume website powered by GitHub Pages.</p>
+        </footer>
+    </div>
+</body>
+</html>
